@@ -18,7 +18,7 @@ function Signup() {
       if (signUpError) throw signUpError;
   
       if (!user || !user.id) {
-        throw new Error("User object is undefined or does not contain an ID");
+        navigate('/login');
       }
 
       console.log('User signed up:', user);
